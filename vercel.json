@@ -1,9 +1,19 @@
 {
     "builds": [
-      { "src": "index.php", "use": "@vercel/php" }
+      {
+        "src": "index.php",
+        "use": "@vercel/php"
+      },
+      {
+        "src": "dbconnect.php",
+        "use": "@vercel/php"
+      }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/index.php" }
+      {
+        "src": "/(.*)",
+        "dest": "/index.php"
+      }
     ]
   }
   
