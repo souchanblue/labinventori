@@ -42,7 +42,7 @@ $hasil = mysqli_query($conn, $update);
   <script>
     setTimeout(function() {
       window.history.back();
-    }, 899);
+    }, 100);
   </script>
 </head>
 
