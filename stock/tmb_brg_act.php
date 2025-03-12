@@ -1,18 +1,20 @@
-<?php 
+<?php
 include '../dbconnect.php';
-$nama=$_POST['nama'];
-$jenis=$_POST['jenis'];
-$ukuran=$_POST['ukuran'];
-$merk=$_POST['merk'];
-$satuan=$_POST['satuan'];
-$stock=$_POST['stock'];
-$lokasi=$_POST['lokasi'];
+$nama = $_POST['nama'];
+$jenis = $_POST['jenis'];
+$ukuran = $_POST['ukuran'];
+$merk = $_POST['merk'];
+$satuan = $_POST['satuan'];
+$stock = $_POST['stock'];
+$lokasi = $_POST['lokasi'];
 
-$query = mysqli_query($conn,"insert into sstock_brg values('','$nama','$jenis','$merk','$ukuran','$stock','$satuan','$lokasi')");
+$query = mysqli_query($conn, "INSERT INTO sstock_brg (nama, jenis, merk, ukuran, stock, satuan, lokasi) 
+VALUES ('$nama', '$jenis', '$merk', '$ukuran', '$stock', '$satuan', '$lokasi')");
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Tambah Barang</title>
   <meta charset="utf-8">
@@ -27,9 +29,11 @@ $query = mysqli_query($conn,"insert into sstock_brg values('','$nama','$jenis','
       margin: 0;
       background-color: #f9f9f9;
     }
+
     .bee-container {
       text-align: center;
     }
+
     .bee-container img {
       width: 300px;
       height: auto;
@@ -41,9 +45,11 @@ $query = mysqli_query($conn,"insert into sstock_brg values('','$nama','$jenis','
     }, 899);
   </script>
 </head>
+
 <body>
   <div class="bee-container">
     <img src="../stock/assets/images/kucing.gif" alt="Bee Icon">
   </div>
 </body>
+
 </html>

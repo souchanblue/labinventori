@@ -2,10 +2,13 @@
 session_start();
 include 'dbconnect.php';
 
+// Jika sudah login, langsung arahkan ke halaman stock/index.php
 if (isset($_SESSION['role'])) {
-	header("location:stock");
+	header("Location: stock/index.php");
+	exit();
 }
 
+// Menampilkan pesan berdasarkan parameter 'pesan' di URL
 if (isset($_GET['pesan'])) {
 	if ($_GET['pesan'] == "gagal") {
 		echo "Username atau Password salah!";
@@ -18,33 +21,41 @@ if (isset($_GET['pesan'])) {
 	}
 }
 
+// Proses login
 if (isset($_POST['btn-login'])) {
 	$uname = mysqli_real_escape_string($conn, $_POST['username']);
 	$upass = mysqli_real_escape_string($conn, md5($_POST['password']));
 
-	// menyeleksi data user dengan username dan password yang sesuai
-	$login = mysqli_query($conn, "select * from slogin where username='$uname' and password='$upass';");
-	// menghitung jumlah data yang ditemukan
+	// Query untuk mengecek user
+	$login = mysqli_query($conn, "SELECT * FROM slogin WHERE username='$uname' AND password='$upass'");
 	$cek = mysqli_num_rows($login);
 
-	// cek apakah username dan password di temukan pada database
 	if ($cek > 0) {
-
 		$data = mysqli_fetch_assoc($login);
 
 		if ($data['role'] == "stock") {
-			// buat session login dan username
+			// Set session untuk user stock
 			$_SESSION['user'] = $data['nickname'];
 			$_SESSION['user_login'] = $data['username'];
 			$_SESSION['id'] = $data['id'];
 			$_SESSION['role'] = "stock";
-			header("location:stock");
+
+			// Redirect ke halaman stock/index.php setelah login sukses
+			header("Location: stock/index.php");
+			exit();
 		} else {
-			header("location:index.php?pesan=gagal");
+			// Jika bukan role stock, redirect dengan pesan error
+			header("Location: index.php?pesan=gagal");
+			exit();
 		}
+	} else {
+		// Jika username/password tidak cocok
+		header("Location: index.php?pesan=gagal");
+		exit();
 	}
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

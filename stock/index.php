@@ -1,11 +1,10 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
 <?php
+session_start(); // Pastikan ini di baris pertama
 include '../dbconnect.php';
 include 'cek.php';
 ?>
-
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
     <link rel="icon"

@@ -1,10 +1,13 @@
+<?php
+session_start(); // Pastikan ini di baris pertama
+include '../dbconnect.php';
+include 'cek.php';
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 
 <?php
-include '../dbconnect.php';
-include 'cek.php';
-
 if (isset($_POST['update'])) {
     $id = $_POST['id']; //iddata
     $idx = $_POST['idx']; //idbarang
