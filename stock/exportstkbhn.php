@@ -1,10 +1,10 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
 <?php 
 	include 'cek.php';
 	include '../dbconnect.php';
 	?>
+<!doctype html>
+<html class="no-js" lang="en">
+
 
 <html>
 <head>
