@@ -105,11 +105,6 @@ if (isset($_POST['hapus'])) {
 </head>
 
 <body style="background-color: #EAEAEA;">
-    <!-- preloader area start -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-    <!-- preloader area end -->
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->

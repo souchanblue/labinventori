@@ -89,12 +89,7 @@ if (isset($_POST['hapus'])) {
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body style="background-color: #FCDEC0;">
-    <!-- preloader area start -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-    <!-- preloader area end -->
+<body style="background-color: #EAEAEA;">
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -170,7 +165,7 @@ if (isset($_POST['hapus'])) {
             </div>
         </div>
         <!-- main content area start -->
-        <div class="main-content" style="background-color: #FCDEC0;">
+        <div class="main-content" style="background-color: #EAEAEA;">
             <div class="header-area">
                 <div class="row align-items-center">
                     <!-- nav and search button -->
@@ -213,15 +208,15 @@ if (isset($_POST['hapus'])) {
             </div>
             <!-- header area end -->
 
-            <div class="main-content-inner" style="background-color: #FCDEC0;">
+            <div class="main-content-inner" style="background-color: #EAEAEA;">
                 <!-- market value area start -->
                 <div class="row mt-5 mb-5">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-                                    <h2 style="color: #7D5A50;">Daftar User</h2>
-                                    <button style="margin-bottom:20px; background-color: #B4846C; border-color: #B4846C;" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2">
+                                    <h2 style="color:rgb(0, 0, 0);">Daftar User</h2>
+                                    <button style="margin-bottom:20px; background-color: #629584; border-color:rgb(255, 255, 255);" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2">
                                         <span class="glyphicon glyphicon-plus"></span>Tambah User
                                     </button>
                                 </div>
@@ -420,9 +415,13 @@ if (isset($_POST['hapus'])) {
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/scripts.js"></script>
         <style>
+             .alert {
+                margin-bottom: 0;
+            }
+
             .sidebar-menu {
-                background: #7D5A50;
-                color: #FCDEC0;
+                background: #2DAA9E;
+                color: #EAEAEA;
                 height: 100vh;
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
             }
@@ -430,8 +429,8 @@ if (isset($_POST['hapus'])) {
             .sidebar-header {
                 padding: 20px;
                 text-align: center;
-                border-bottom: 2px solid #B4846C;
-                background: #7D5A50;
+                border-bottom: 2px solid #EAEAEA;
+                background: #2DAA9E;
             }
 
             .sidebar-header img {
@@ -450,11 +449,11 @@ if (isset($_POST['hapus'])) {
 
             .main-menu nav ul li {
                 padding: 15px 20px;
-                border-bottom: 1px solid #B4846C;
+                border-bottom: 1px solid #EAEAEA;
             }
 
             .main-menu nav ul li a {
-                color: #FCDEC0;
+                color: rgb(255, 255, 255);
                 text-decoration: none;
                 font-weight: bold;
                 display: flex;
@@ -463,7 +462,7 @@ if (isset($_POST['hapus'])) {
             }
 
             .main-menu nav ul li a:hover {
-                background: #B4846C;
+                background: #66D2CE;
                 border-radius: 5px;
             }
 
@@ -473,12 +472,12 @@ if (isset($_POST['hapus'])) {
             }
 
             .main-menu nav ul li.active a {
-                background: #B4846C;
+                background: #66D2CE;
                 border-radius: 5px;
             }
 
             .main-menu nav ul li a i {
-                color: #FCDEC0;
+                color: #EAEAEA;
             }
              /* Ganti font untuk seluruh elemen */
              body {
@@ -527,10 +526,10 @@ if (isset($_POST['hapus'])) {
                 /* Font untuk teks monospace */
             }
             .header-area {
-                    background: #B4846C;
+                    background: #2DAA9E;
                     padding: 10px 20px;
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                    border-bottom: 2px solid #FCDEC0;
+                    border-bottom: 2px solid #EAEAEA;
                 }
 
                 .header-area h2 {
@@ -552,114 +551,210 @@ if (isset($_POST['hapus'])) {
                     padding: 5px 10px;
                     border-radius: 10px;
                 }
+                .card {
+                    background-color: #2DAA9E;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+
+                /* Gaya untuk tabel dengan tema warna */
+                .data-tables.datatable-dark {
+                    background-color: #EAEAEA;
+                    color:rgb(0, 0, 0);
+                    border: 1px solid #2DAA9E;
+                    border-radius: 8px;
+                    padding: 10px;
+                }
+
+                .data-tables.datatable-dark table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+
+                .data-tables.datatable-dark th {
+                    background-color: #2DAA9E;
+                    color: rgb(255, 255, 255);
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                .data-tables.datatable-dark td {
+                    padding: 8px;
+                    border: 1px solid #2DAA9E;
+                    background-color: rgb(255, 255, 255);
+                    text-align: center;
+                    /* Pusatkan teks dalam sel */
+
+                }
+
+                .data-tables.datatable-dark tbody tr:nth-child(odd) {
+                    background-color: #2DAA9E;
+                }
+
+                .btn-danger {
+                    background-color: #B4846C;
+                    color: rgb(255, 255, 255);
+                    border: 1px solid #B4846C;
+                }
+
+                .btn-danger:hover {
+                    background-color: #B4846C;
+                    color: #FCDEC0;
+                }
+
+                /* Input form styling */
+                .form-control {
+                    border: 1px solid #2DAA9E;
+                    background-color: rgb(255, 255, 255);
+                    color:rgb(0, 0, 0);
+                }
+
+                .form-control:focus {
+                    border-color: #2DAA9E;
+                    outline: none;
+                    box-shadow: 0 0 5px #2DAA9E;
+                }
+
+                /* Tombol simpan */
+                .btn-success {
+                    background-color: #B4846C;
+                    color: #EAEAEA;
+                    border: 1px solid #B4846C;
+                }
+
+                .btn-success:hover {
+                    background-color: #145A32;
+                    color: #EAEAEA;
+                }
+
+                /* Tombol close */
+                .btn-secondary {
+                    background-color: #C96868;
+                    color: #EAEAEA;
+                    border: 1px solid #B4846C;
+                }
+
+                .btn-secondary:hover {
+                    background-color: #B4846C;
+                    color: #EAEAEA;
+                }
+
+                .card {
+                    background-color: #EAEAEA;
+                    /* Warna latar belakang card */
+                }
+
+                .thead-dark {
+                    background-color: #EAEAEA;
+                    /* Warna latar belakang header tabel */
+                    color: white;
+                    /* Warna teks header tabel */
+                }
+
                 .btn-info {
-                        background-color: #B4846C;
-                        color: #FCDEC0;
-                        border: 1px solid #B4846C;
-                    }
-                    .btn-info:hover {
-                        background-color: #B4846C;
-                        color: #FCDEC0;
-                        border: 1px solid #B4846C;
-                    }
+                    background-color: #7EACB5;
+                    /* Warna tombol Tambah Barang */
+                    border-color: #7EACB5;
+                    color: white;
+                    /* Warna teks tombol */
+                }
 
-                    .card {
-                        background-color: rgb(245, 215, 184);
-                        border-radius: 8px;
-                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                    }
+                .btn-info:hover {
+                    background-color:rgb(112, 153, 161);
+                    /* Warna hover untuk tombol Tambah Barang */
+                    border-color: #7EACB5;
+                }
 
-                    /* Gaya untuk tabel dengan tema warna */
-                    .data-tables.datatable-dark {
-                        background-color: #F1DEC9;
-                        color: #7D5A50;
-                        border: 1px solid #B4846C;
-                        border-radius: 8px;
-                        padding: 10px;
-                    }
+                .btn-warning {
+                    background-color: #3D8D7A;
+                    /* Warna tombol Edit */
+                    border-color: #3D8D7A;
+                    color: white;
+                    /* Warna teks tombol */
+                }
 
-                    .data-tables.datatable-dark table {
-                        width: 100%;
-                        border-collapse: collapse;
-                    }
+                .btn-warning:hover {
+                    background-color: #3D8D7A;
+                    /* Warna hover untuk tombol Edit */
+                    border-color: #3D8D7A;
+                }
 
-                    .data-tables.datatable-dark th {
-                        background-color: #B4846C;
-                        color: rgb(255, 255, 255);
-                        padding: 10px;
-                        text-align: center;
-                    }
+                .btn-danger {
+                    background-color: #B4846C;
+                    /* Warna tombol Delete */
+                    border-color: #B4846C;
+                    color: white;
+                    /* Warna teks tombol */
+                }
 
-                    .data-tables.datatable-dark td {
-                        padding: 8px;
-                        border: 1px solid #E5B299;
-                        background-color: rgb(255, 255, 255);
-                        text-align: center;
-                    }
+                .btn-danger:hover {
+                    background-color: #B4846C;
+                    /* Warna hover untuk tombol Delete */
+                    border-color: #6A4A42;
+                }
 
-                    .data-tables.datatable-dark tbody tr:nth-child(odd) {
-                        background-color: #E5B299;
-                    }
+                .btn-success {
+                    background-color:rgb(255, 255, 255);
+                    /* Warna tombol Save dan Hapus */
+                    border-color:rgb(0, 0, 0);
+                    color: black;
+                    /* Warna teks tombol */
+                }
 
-                    /* Tombol edit dan delete */
-                    .btn-warning {
-                        background-color: #E5B299;
-                        color: #7D5A50;
-                        border: 1px solid #B4846C;
-                    }
+                .btn-success:hover {
+                    background-color: #54C392;
+                    /* Warna hover untuk tombol Save dan Hapus */
+                    border-color: #54C392;
+                }
 
-                    .btn-warning:hover {
-                        background-color: #B4846C;
-                        color: rgb(255, 255, 255);
-                    }
+                .btn-secondary {
+                    background-color: #181C14;
+                    /* Warna tombol Close dan Batal */
+                    border-color: #181C14;
+                    color: white;
+                    /* Warna teks tombol */
+                }
 
-                    .btn-danger {
-                        background-color: #7D5A50;
-                        color: rgb(255, 255, 255);
-                        border: 1px solid #B4846C;
-                    }
+                .btn-secondary:hover {
+                    background-color:rgb(13, 15, 11);
+                    /* Warna hover untuk tombol Close dan Batal */
+                    border-color: #181C14;
+                }
 
-                    .btn-danger:hover {
-                        background-color: #B4846C;
-                        color: #FCDEC0;
-                    }
+                /* Tombol edit dan delete */
+                .btn-warning {
+                    background-color: #3D8D7A;
+                    color:rgb(255, 255, 255);
+                    border: 1px solid #3D8D7A;
+                }
 
-                    /* Input form styling */
-                    .form-control {
-                        border: 1px solid #B4846C;
-                        background-color: rgb(255, 255, 255);
-                        color: #7D5A50;
-                    }
+                .btn-warning:hover,
+                .btn-warning:active {
+                    background-color:rgb(49, 112, 97) !important;
+                    color:rgb(255, 255, 255) !important;
+                    box-shadow: none !important;
+                    border: 1px solid #3D8D7A;
 
-                    .form-control:focus {
-                        border-color: #7D5A50;
-                        outline: none;
-                        box-shadow: 0 0 5px #B4846C;
-                    }
+                }
 
-                    /* Tombol simpan */
-                    .btn-success {
-                        background-color: #229954;
-                        color: #FCDEC0;
-                        border: 1px solid #145A32;
-                    }
+                .btn-danger {
+                    background-color: #A02334;
+                    color:rgb(255, 255, 255);
+                    border: 1px solid #A02334;
+                }
 
-                    .btn-success:hover {
-                        background-color: #145A32;
-                        color: #FCDEC0;
-                    }
+                i {
+                    color: white;
+                }
 
-                    /* Tombol close */
-                    .btn-secondary {
-                        background-color: #E5B299;
-                        color: #7D5A50;
-                        border: 1px solid #B4846C;
-                    }
+                .btn-danger:hover,
+                .btn-danger:active {
+                    background-color: #A02334 !important;
+                    color:rgb(255, 255, 255) !important;
+                    box-shadow: none !important;
+                    border: 1px solid #A02334;
 
-                    .btn-secondary:hover {
-                        background-color: #B4846C;
-                        color: #FCDEC0;
-                    }
+                }
         </style>
 
 </body>
