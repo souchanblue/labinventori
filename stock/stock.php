@@ -104,7 +104,7 @@ if (isset($_POST['hapus'])) {
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body style="background-color: #FCDEC0;">
+<body style="background-color: #EAEAEA;">
     <!-- preloader area start -->
     <div id="preloader">
         <div class="loader"></div>
@@ -114,10 +114,13 @@ if (isset($_POST['hapus'])) {
     <div class="page-container">
         <!-- sidebar menu area start -->
         <style>
-            
+            .alert {
+                margin-bottom: 0;
+            }
+
             .sidebar-menu {
-                background: #7D5A50;
-                color: #FCDEC0;
+                background: #2DAA9E;
+                color: #EAEAEA;
                 height: 100vh;
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
             }
@@ -125,8 +128,8 @@ if (isset($_POST['hapus'])) {
             .sidebar-header {
                 padding: 20px;
                 text-align: center;
-                border-bottom: 2px solid #B4846C;
-                background: #7D5A50;
+                border-bottom: 2px solid #EAEAEA;
+                background: #2DAA9E;
             }
 
             .sidebar-header img {
@@ -145,11 +148,11 @@ if (isset($_POST['hapus'])) {
 
             .main-menu nav ul li {
                 padding: 15px 20px;
-                border-bottom: 1px solid #B4846C;
+                border-bottom: 1px solid #EAEAEA;
             }
 
             .main-menu nav ul li a {
-                color: #FCDEC0;
+                color: rgb(255, 255, 255);
                 text-decoration: none;
                 font-weight: bold;
                 display: flex;
@@ -158,7 +161,7 @@ if (isset($_POST['hapus'])) {
             }
 
             .main-menu nav ul li a:hover {
-                background: #B4846C;
+                background: #66D2CE;
                 border-radius: 5px;
             }
 
@@ -168,18 +171,17 @@ if (isset($_POST['hapus'])) {
             }
 
             .main-menu nav ul li.active a {
-                background: #B4846C;
+                background: #66D2CE;
                 border-radius: 5px;
             }
-            
 
             .main-menu nav ul li a i {
-                color: #FCDEC0;
+                color: #EAEAEA;
             }
         </style>
 
         <div class="sidebar-menu">
-        <div class="sidebar-header">
+            <div class="sidebar-header">
                 <a href="#" id="change-photo">
                     <img src="<?php echo isset($_SESSION['foto']) ? $_SESSION['foto'] : 'logo.jpg'; ?>" alt="logo" id="profile-photo" width="300px">
                 </a>
@@ -303,13 +305,13 @@ if (isset($_POST['hapus'])) {
 
         <!-- main content area start -->
         <!-- main content area start -->
-        <div class="main-content" style="background-color: #FCDEC0;">
+        <div class="main-content" style="background-color: #EAEAEA;">
             <style>
                 .header-area {
-                    background: #B4846C;
+                    background: #2DAA9E;
                     padding: 10px 20px;
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                    border-bottom: 2px solid #FCDEC0;
+                    border-bottom: 2px solid #EAEAEA;
                 }
 
                 .header-area h2 {
@@ -391,15 +393,15 @@ if (isset($_POST['hapus'])) {
                 }
             }
             ?>
-            <div class="main-content-inner" style="background-color: #FCDEC0;">
+            <div class="main-content-inner">
                 <!-- market value area start -->
                 <div class="row mt-5 mb-5">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-sm-flex justify-content-between align-items-center">
-                                    <h2 style="color: #7D5A50;">Daftar Barang</h2>
-                                    <button style="margin-bottom:20px; background-color: #B4846C; border-color: #B4846C;" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2">
+                                    <h2 style="color:rgb(0, 0, 0);">Daftar Barang</h2>
+                                    <button style="margin-bottom:20px; background-color: #629584; border-color:rgb(255, 255, 255);" data-toggle="modal" data-target="#myModal" class="btn btn-info col-md-2">
                                         <span class="glyphicon glyphicon-plus"></span>Tambah Barang
                                     </button>
                                 </div>
@@ -519,7 +521,7 @@ if (isset($_POST['hapus'])) {
                                     </table>
                                 </div>
                                 <a href="exportstkbhn.php" target="_blank" class="mt-4 btn btn-info">Export Data</a>
-                                <a href="tambah_admin.php" class="mt-4 btn btn-info">Tambah Admin</a>
+                                <a href="tambah_admin.php" class="mt-4 btn btn-warning">Tambah Admin</a>
                             </div>
                         </div>
                     </div>
@@ -528,23 +530,16 @@ if (isset($_POST['hapus'])) {
 
             <style>
                 .card {
-                    background-color: rgb(245, 215, 184);
+                    background-color: #2DAA9E;
                     border-radius: 8px;
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
                 }
 
-                .btn-info {
-                    background-color: #229954;
-                    color: #FCDEC0;
-                    border: 1px solid #145A32;
-                    font-family: 'Playfair Display', serif;
-                }
-
                 /* Gaya untuk tabel dengan tema warna */
                 .data-tables.datatable-dark {
-                    background-color: #F1DEC9;
-                    color: #7D5A50;
-                    border: 1px solid #B4846C;
+                    background-color: #EAEAEA;
+                    color:rgb(0, 0, 0);
+                    border: 1px solid #2DAA9E;
                     border-radius: 8px;
                     padding: 10px;
                 }
@@ -555,7 +550,7 @@ if (isset($_POST['hapus'])) {
                 }
 
                 .data-tables.datatable-dark th {
-                    background-color: #B4846C;
+                    background-color: #2DAA9E;
                     color: rgb(255, 255, 255);
                     padding: 10px;
                     text-align: center;
@@ -563,7 +558,7 @@ if (isset($_POST['hapus'])) {
 
                 .data-tables.datatable-dark td {
                     padding: 8px;
-                    border: 1px solid #E5B299;
+                    border: 1px solid #2DAA9E;
                     background-color: rgb(255, 255, 255);
                     text-align: center;
                     /* Pusatkan teks dalam sel */
@@ -571,23 +566,11 @@ if (isset($_POST['hapus'])) {
                 }
 
                 .data-tables.datatable-dark tbody tr:nth-child(odd) {
-                    background-color: #E5B299;
-                }
-
-                /* Tombol edit dan delete */
-                .btn-warning {
-                    background-color: #E5B299;
-                    color: #7D5A50;
-                    border: 1px solid #B4846C;
-                }
-
-                .btn-warning:hover {
-                    background-color: #B4846C;
-                    color: rgb(255, 255, 255);
+                    background-color: #2DAA9E;
                 }
 
                 .btn-danger {
-                    background-color: #7D5A50;
+                    background-color: #B4846C;
                     color: rgb(255, 255, 255);
                     border: 1px solid #B4846C;
                 }
@@ -599,148 +582,143 @@ if (isset($_POST['hapus'])) {
 
                 /* Input form styling */
                 .form-control {
-                    border: 1px solid #B4846C;
+                    border: 1px solid #2DAA9E;
                     background-color: rgb(255, 255, 255);
-                    color: #7D5A50;
+                    color:rgb(0, 0, 0);
                 }
 
                 .form-control:focus {
-                    border-color: #7D5A50;
+                    border-color: #2DAA9E;
                     outline: none;
-                    box-shadow: 0 0 5px #B4846C;
+                    box-shadow: 0 0 5px #2DAA9E;
                 }
 
                 /* Tombol simpan */
                 .btn-success {
-                    background-color: #229954;
-                    color: #FCDEC0;
-                    border: 1px solid #145A32;
+                    background-color: #B4846C;
+                    color: #EAEAEA;
+                    border: 1px solid #B4846C;
                 }
 
                 .btn-success:hover {
                     background-color: #145A32;
-                    color: #FCDEC0;
+                    color: #EAEAEA;
                 }
 
                 /* Tombol close */
                 .btn-secondary {
-                    background-color: #E5B299;
-                    color: #7D5A50;
+                    background-color: #C96868;
+                    color: #EAEAEA;
                     border: 1px solid #B4846C;
                 }
 
                 .btn-secondary:hover {
                     background-color: #B4846C;
-                    color: #FCDEC0;
+                    color: #EAEAEA;
                 }
 
                 .card {
-                    background-color: rgb(245, 215, 184);
+                    background-color: #EAEAEA;
                     /* Warna latar belakang card */
                 }
 
                 .thead-dark {
-                    background-color: #7D5A50;
+                    background-color: #EAEAEA;
                     /* Warna latar belakang header tabel */
                     color: white;
                     /* Warna teks header tabel */
                 }
 
                 .btn-info {
-                    background-color: #B4846C;
+                    background-color: #7EACB5;
                     /* Warna tombol Tambah Barang */
-                    border-color: #B4846C;
+                    border-color: #7EACB5;
                     color: white;
                     /* Warna teks tombol */
                 }
 
                 .btn-info:hover {
-                    background-color: #A0735F;
+                    background-color:rgb(112, 153, 161);
                     /* Warna hover untuk tombol Tambah Barang */
-                    border-color: #A0735F;
+                    border-color: #7EACB5;
                 }
 
                 .btn-warning {
-                    background-color: #E5B299;
+                    background-color: #3D8D7A;
                     /* Warna tombol Edit */
-                    border-color: #E5B299;
+                    border-color: #3D8D7A;
                     color: white;
                     /* Warna teks tombol */
                 }
 
                 .btn-warning:hover {
-                    background-color: #D49A7F;
+                    background-color: #3D8D7A;
                     /* Warna hover untuk tombol Edit */
-                    border-color: #D49A7F;
+                    border-color: #3D8D7A;
                 }
 
                 .btn-danger {
-                    background-color: #7D5A50;
-                    /* Warna tombol Delete */
-                    border-color: #7D5A50;
-                    color: white;
-                    /* Warna teks tombol */
-                }
-
-                .btn-danger:hover {
-                    background-color: #6A4A42;
-                    /* Warna hover untuk tombol Delete */
-                    border-color: #6A4A42;
-                }
-
-                .btn-success {
                     background-color: #B4846C;
-                    /* Warna tombol Save dan Hapus */
+                    /* Warna tombol Delete */
                     border-color: #B4846C;
                     color: white;
                     /* Warna teks tombol */
                 }
 
+                .btn-danger:hover {
+                    background-color: #B4846C;
+                    /* Warna hover untuk tombol Delete */
+                    border-color: #6A4A42;
+                }
+
+                .btn-success {
+                    background-color:rgb(255, 255, 255);
+                    /* Warna tombol Save dan Hapus */
+                    border-color:rgb(0, 0, 0);
+                    color: black;
+                    /* Warna teks tombol */
+                }
+
                 .btn-success:hover {
-                    background-color: #9C6B5A;
+                    background-color: #54C392;
                     /* Warna hover untuk tombol Save dan Hapus */
-                    border-color: #9C6B5A;
+                    border-color: #54C392;
                 }
 
                 .btn-secondary {
-                    background-color: #E5B299;
+                    background-color: #181C14;
                     /* Warna tombol Close dan Batal */
-                    border-color: #E5B299;
+                    border-color: #181C14;
                     color: white;
                     /* Warna teks tombol */
                 }
 
                 .btn-secondary:hover {
-                    background-color: #D49A7F;
+                    background-color:rgb(13, 15, 11);
                     /* Warna hover untuk tombol Close dan Batal */
-                    border-color: #D49A7F;
-                }
-
-                .modal-body {
-                    background-color: #FFFFFF;
-                    /* Warna latar belakang body modal */
+                    border-color: #181C14;
                 }
 
                 /* Tombol edit dan delete */
                 .btn-warning {
-                    background-color: #E5B299;
-                    color: #7D5A50;
-                    border: 1px solid #B4846C;
+                    background-color: #3D8D7A;
+                    color:rgb(255, 255, 255);
+                    border: 1px solid #3D8D7A;
                 }
 
                 .btn-warning:hover,
                 .btn-warning:active {
-                    background-color: #B4846C !important;
-                    color: #FCDEC0 !important;
+                    background-color:rgb(49, 112, 97) !important;
+                    color:rgb(255, 255, 255) !important;
                     box-shadow: none !important;
-                    border: 1px solid #B4846C;
+                    border: 1px solid #3D8D7A;
 
                 }
 
                 .btn-danger {
-                    background-color: #7D5A50;
-                    color: #FCDEC0;
-                    border: 1px solid #B4846C;
+                    background-color: #A02334;
+                    color:rgb(255, 255, 255);
+                    border: 1px solid #A02334;
                 }
 
                 i {
@@ -749,10 +727,10 @@ if (isset($_POST['hapus'])) {
 
                 .btn-danger:hover,
                 .btn-danger:active {
-                    background-color: #B4846C !important;
-                    color: #FCDEC0 !important;
+                    background-color: #A02334 !important;
+                    color:rgb(255, 255, 255) !important;
                     box-shadow: none !important;
-                    border: 1px solid #B4846C;
+                    border: 1px solid #A02334;
 
                 }
             </style>
@@ -787,43 +765,33 @@ if (isset($_POST['hapus'])) {
                                 <input name="ukuran" type="text" class="form-control" placeholder="Ukuran">
                             </div>
                             <div class="form-group">
-                                <label>Stock</label>
-                                <input name="stock" type="number" min="0" class="form-control" placeholder="Qty">
-                            </div>
-                            <div class="form-group">
                                 <label>Satuan</label>
                                 <select style="padding: 8px 12px; line-height: 1.5;" name="satuan" class="custom-select form-control">
 
                                     <option selected>Pilih satuan</option>
-                                    <option value="Mol">Mol (mol)</option>
-                                    <option value="Normalitas">Normalitas (N)</option>
-                                    <option value="Molaritas">Molaritas (M)</option>
-                                    <option value="Part per Million">Part per Million (ppm)</option>
-                                    <option value="Part per Billion">Part per Billion (ppb)</option>
                                     <option value="Kilogram">Kilogram (kg)</option>
                                     <option value="Gram">Gram (g)</option>
-                                    <option value="Miligram">Miligram (mg)</option>
-                                    <option value="Mikrogram">Mikrogram (µg)</option>
                                     <option value="Liter">Liter (L)</option>
                                     <option value="Mililiter">Mililiter (mL)</option>
-                                    <option value="Microliter">Microliter (µL)</option>
-                                    <option value="Meter">Meter (m)</option>
-                                    <option value="Centimeter">Centimeter (cm)</option>
                                     <option value="Milimeter">Milimeter (mm)</option>
-                                    <option value="Nanometer">Nanometer (nm)</option>
-
+                                    <option value="Pcs">Pcs</option>
+                                    <option value="Pack">Pack</option>
                                 </select>
+                            <div class="form-group">
+                                <label>Stock</label>
+                                <input name="stock" type="number" min="0" class="form-control" placeholder="Qty">
+                            </div>
 
                             </div>
                             <div class="form-group">
-                                <label>Lokasi-lab-ruang </label>
+                                <label>Lokasi</label>
                                 <input name="lokasi" type="text" class="form-control" placeholder="Lokasi barang">
                             </div>
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-warning text-white" data-dismiss="modal">Batal</button>
-                        <input type="submit" class="btn btn-danger text-white" value="Simpan">
+                        <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Batal</button>
+                        <input type="submit" class="btn btn-success" value="Simpan">
                     </div>
                     </form>
                 </div>

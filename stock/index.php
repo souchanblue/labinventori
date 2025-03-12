@@ -43,7 +43,7 @@ include 'cek.php';
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body style="background-color: #FCDEC0;">
+<body style="background-color: #EAEAEA;">
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -53,8 +53,8 @@ include 'cek.php';
             }
 
             .sidebar-menu {
-                background: #7D5A50;
-                color: #FCDEC0;
+                background: #2DAA9E;
+                color: #EAEAEA;
                 height: 100vh;
                 box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
             }
@@ -62,8 +62,8 @@ include 'cek.php';
             .sidebar-header {
                 padding: 20px;
                 text-align: center;
-                border-bottom: 2px solid #B4846C;
-                background: #7D5A50;
+                border-bottom: 2px solid #EAEAEA;
+                background: #2DAA9E;
             }
 
             .sidebar-header img {
@@ -82,11 +82,11 @@ include 'cek.php';
 
             .main-menu nav ul li {
                 padding: 15px 20px;
-                border-bottom: 1px solid #B4846C;
+                border-bottom: 1px solid #EAEAEA;
             }
 
             .main-menu nav ul li a {
-                color: #FCDEC0;
+                color:rgb(255, 255, 255);
                 text-decoration: none;
                 font-weight: bold;
                 display: flex;
@@ -95,7 +95,7 @@ include 'cek.php';
             }
 
             .main-menu nav ul li a:hover {
-                background: #B4846C;
+                background: #66D2CE;
                 border-radius: 5px;
             }
 
@@ -105,12 +105,12 @@ include 'cek.php';
             }
 
             .main-menu nav ul li.active a {
-                background: #B4846C;
+                background: #66D2CE;
                 border-radius: 5px;
             }
 
             .main-menu nav ul li a i {
-                color: #FCDEC0;
+                color: #EAEAEA;
             }
         </style>
 
@@ -195,10 +195,10 @@ include 'cek.php';
         <div class="main-content">
             <style>
                 .header-area {
-                    background: #B4846C;
+                    background: #2DAA9E;
                     padding: 10px 20px;
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                    border-bottom: 2px solid #FCDEC0;
+                    border-bottom: 2px solid #EAEAEA;
                 }
 
                 .header-area h2 {
@@ -282,7 +282,7 @@ include 'cek.php';
                 }
             }
             ?>
-            <div class="chat-container" style="padding: 20px; background:rgb(255, 236, 216);">
+            <div class="chat-container" style="padding: 20px; background: #EAEAEA;">
                 <?php
                 $queri = "SELECT * FROM notes WHERE status='aktif' ORDER BY tanggal_notes ASC";
                 $hasil = MySQLi_query($conn, $queri);
@@ -291,10 +291,10 @@ include 'cek.php';
                 while ($data = mysqli_fetch_array($hasil)) {
                     $isCurrentUser = ($_SESSION['user'] == $data['admin']);
                     $bubbleClass = $isCurrentUser ? 'chat-bubble-right' : 'chat-bubble-left';
-                    $bubbleColor = $isCurrentUser ? '#E5B299' : '#FCDEC0';
+                    $bubbleColor = $isCurrentUser ? '#E3D2C3' : '#EAD8B1';
                     $align = $isCurrentUser ? 'flex-end' : 'flex-start';
                     $tanggal = date('d M Y', strtotime($data['tanggal_notes']));
-                    $waktu = date('H:i', strtotime($data['tanggal_notes']));
+                    $waktu = date('H:i', timestamp: strtotime($data['tanggal_notes']));
 
                     if ($tanggal !== $lastDate) {
                         echo "<div class='chat-date-bubble'><span>$tanggal</span></div>";
@@ -318,15 +318,15 @@ include 'cek.php';
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <form method='POST' action='notes.php' class="chat-input" style="position: sticky; bottom: 0; width: 100%; padding: 10px; background: transparent;">
                     <div class="chat-bubble chat-bubble-input" style="width: 100%; display: flex; gap: 10px; align-items: center;">
-                        <textarea name='konten' class='form-control chat-textarea' placeholder='Tulis catatan...' required style="flex: 1; background: transparent; border: 1px solid #B4846C; border-radius: 10px; padding: 10px; color: #7D5A50;"></textarea>
-                        <button type='submit' name='submit' class='btn btn-primary chat-send' style="background: #B4846C; border-color: #7D5A50; border-radius: 20px; padding: 10px 20px; font-weight: bold;">Kirim</button>
+                        <textarea name='konten' class='form-control chat-textarea' placeholder='Tulis catatan...' required style="flex: 1; background: transparent; border: 1px solid #66D2CE; border-radius: 10px; padding: 10px; color:rgb(0, 0, 0);"></textarea>
+                        <button type='submit' name='submit' class='btn btn-primary chat-send' style="background: #2DAA9E; border-color: #66D2CE; border-radius: 20px; padding: 10px 20px; font-weight: bold;">Kirim</button>
                     </div>
                 </form>
             </div>
 
             <style>
                 body {
-                    background: #FCDEC0;
+                    background: #EAEAEA;
 
                 }
 
@@ -341,7 +341,7 @@ include 'cek.php';
 
                 .chat-date-bubble {
                     align-self: center;
-                    background: #B4846C;
+                    background: #2DAA9E;
                     color: rgb(255, 255, 255);
                     padding: 5px 10px;
                     border-radius: 20px;
@@ -363,7 +363,7 @@ include 'cek.php';
 
                 .chat-bubble-right {
                     align-self: flex-end;
-                    background: #E5B299;
+                    background: #4F959D;
                 }
 
                 .chat-bubble-input {
@@ -381,7 +381,7 @@ include 'cek.php';
 
                 .chat-time {
                     font-size: 12px;
-                    color: #7D5A50;
+                    color:rgb(0, 0, 0);
                     text-align: right;
                     display: block;
                 }
@@ -394,7 +394,7 @@ include 'cek.php';
                     position: sticky;
                     bottom: 0;
                     width: 100%;
-                    background: #FCDEC0;
+                    background: #EAEAEA;
                     padding: 10px;
                     box-sizing: border-box;
                 }
@@ -403,17 +403,17 @@ include 'cek.php';
                     width: 100%;
                     min-height: 60px;
                     resize: none;
-                    border: 1px solid #B4846C;
+                    border: 1px solid #E3D2C3;
                     border-radius: 10px;
                     padding: 10px;
                     background: transparent;
-                    color: #7D5A50;
+                    color: #4F959D;
                 }
 
                 .chat-send {
                     align-self: flex-end;
                     margin-top: 10px;
-                    background: #B4846C;
+                    background: #4F959D;
                     border-color: #7D5A50;
                     border-radius: 20px;
                     padding: 10px 20px;
